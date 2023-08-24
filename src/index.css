@@ -29,4 +29,24 @@ body {
   flex-wrap: wrap;
   width: 105px;
   height: 105px;
+  margin: auto;
+}
+
+.status {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+}
+
+.game-info ol {
+  margin-left: 20px;
+}
+
+.game-info ol li {
+  margin-top: 10px;
 }
