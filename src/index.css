@@ -1,14 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
-.square {
+/* .square {
   width: 35px;
   height: 35px;
   border: 1px solid black;
@@ -49,4 +47,4 @@ body {
 
 .game-info ol li {
   margin-top: 10px;
-}
+} */

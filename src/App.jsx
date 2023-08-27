@@ -3,7 +3,9 @@ import {useState} from "react";
 
 function Square({value, onSquareClick}) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button
+      className="m-auto w-16 h-16 border-solid border-4 border-slate-900 bg-slate-300"
+      onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -29,8 +31,10 @@ function Board({xIsNext, squares, onPlay}) {
 
   return (
     <>
-      <div className="status">{status}</div>
-      <div className="board">
+      <div className="mb-2.5 text-center font-bold text-white text-xl">
+        {status}
+      </div>
+      <div className="flex flex-wrap w-52 h-52 text-4xl">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
@@ -70,18 +74,18 @@ export default function Game() {
     }
 
     return (
-      <li key={move}>
+      <li key={move} className="p-2 rounded bg-sky-600 text-white">
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
 
   return (
-    <div className="game">
+    <div className="flex justify-center">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div className="game-info">
+      <div className="ml-8">
         <ol>{moves}</ol>
       </div>
     </div>
